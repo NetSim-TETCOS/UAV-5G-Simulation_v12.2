@@ -86,9 +86,9 @@ void uav_run()
 		DEVICE_POSITION(pstruEventDetails->nDeviceId));
 
 	//Add event for next point 
-	pstruEventDetails->dEventTime += (1* SECOND);
+	pstruEventDetails->dEventTime += (0.01* SECOND);
 	fnpAddEvent(pstruEventDetails);
-	pstruEventDetails->dEventTime -= (1 * SECOND);
+	pstruEventDetails->dEventTime -= (0.01 * SECOND);
 }
 	
 double* uavcorr(int id)
